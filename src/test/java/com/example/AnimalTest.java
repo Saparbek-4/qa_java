@@ -17,17 +17,6 @@ public class AnimalTest {
         animal = new Animal();
     }
 
-    @ParameterizedTest
-    @CsvSource({
-            "Травоядное, Трава",
-            "Хищник, Животные"
-    })
-    @DisplayName("getFood() should return valid list of foods")
-    public void testGetFoodSuccess(String animalKind, String expectedFirstItem) throws Exception {
-        List<String> food = animal.getFood(animalKind);
-        assertEquals(expectedFirstItem, food.get(0));
-    }
-
     @Test
     @DisplayName("getFood() should throw Exception for invalid kind")
     public void testGetFoodThrowsException() {

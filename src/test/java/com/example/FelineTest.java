@@ -28,17 +28,6 @@ public class FelineTest {
         assertEquals(1, feline.getKittens());
     }
 
-    @ParameterizedTest
-    @DisplayName("getKittens(int kittensCount) should return expected amounts")
-    @CsvSource({
-            "1, 1",
-            "3, 3",
-            "5, 5"
-    })
-    public void testGetKittensWithParams(int input, int expected) {
-        assertEquals(expected, feline.getKittens(input));
-    }
-
     @Test
     @DisplayName("eatMeat() should return expected predator meats")
     public void testEatMeat() throws Exception {

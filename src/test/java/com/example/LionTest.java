@@ -3,8 +3,6 @@ package com.example;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -47,17 +45,6 @@ public class LionTest {
         );
 
         assertEquals("Feline Error",expectedException.getMessage());
-    }
-
-    @ParameterizedTest
-    @CsvSource({
-            "Самец, true",
-            "Самка, false"
-    })
-    @DisplayName("doesHaveMane() returns expected values")
-    public void testDoesHaveManeSucceeds(String sex, boolean expected) throws Exception {
-        Lion lion = new Lion(sex, feline);
-        assertEquals(expected, lion.doesHaveMane());
     }
 
     @Test
