@@ -68,7 +68,7 @@ public class LionTest {
                 () -> new Lion("Not Defined", feline)
         );
 
-        assertEquals("Используйте допустимые значения пола животного - самей или самка",expectedException.getMessage());
+        assertEquals("Используйте допустимые значения пола животного - самец или самка",expectedException.getMessage());
     }
 
 }
